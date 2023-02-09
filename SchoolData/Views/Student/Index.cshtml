@@ -1,27 +1,49 @@
-﻿@{
+﻿@model SchoolData.Models.Student[]
 
+@{
+    ViewData["Title"] = "Studenti";
 }
 
-<div>
-    <div class="text-xl my-2 text-blue-300">
-        Studenti della scuola
-    </div>
-    
-    <div>
-        <div class="container row">
-            <div>
-                Paolo
-            </div>
-            <div>
-                Rossi
-            </div>
-            <div>
-                Media
-            </div>
-            <div style="margin-left=20px">
-                <button class="btn btn-default">Rimuovi</button>
-                <button class="btn btn-default">Modifica</button>
-            </div>
-        </div>
-    </div>
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Cognome
+            </th>
+            <th>
+                Assenze
+            </th>
+            <th>
+                Classe
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cognome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.assenze)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.classe)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
