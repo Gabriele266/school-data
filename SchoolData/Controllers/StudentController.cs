@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using SchoolData.Models;
 using SchoolData.Data;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace SchoolData.Controllers
 {
     public class StudentController : Controller
@@ -28,9 +26,15 @@ namespace SchoolData.Controllers
             // TODO: Sostituire con valori effettivi
             //Student[] students = _context.Student.ToList().ToArray();
 
-            Student[] students = Student.GetMockValues();
-
-            return View(students);
+            try
+            {
+                Student[] students = Student.GetMockValues();
+                return View(students);
+            }
+            catch (Exception)
+            {
+                return View("Error", new ErrorViewModel());
+            }
         }
 
         [HttpPost]
