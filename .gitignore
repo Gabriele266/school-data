@@ -1,4 +1,2 @@
-﻿
-./bin
-./SchoolData/bin
-./SchoolData/obj
+SchoolData/bin
+SchoolData/obj

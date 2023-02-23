@@ -38,9 +38,12 @@ namespace SchoolData.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Student student)
+        public IActionResult Edit(int studentId)
         {
-            return View();
+            // Load student
+            Student s = Student.GetMockValues()[0];
+
+            return View(s);
         }
     }
 }
