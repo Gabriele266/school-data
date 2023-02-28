@@ -1,6 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SchoolData.Data;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddDbContext<SchoolDataContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("SchoolDataContext")));
+}
+else
+{
+    builder.Services.AddDbContext<SchoolDataContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionSchoolDataContext")));
+}
+
+builder.Services.AddDbContext<SchoolDataContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("SchoolDataContext") ?? throw new InvalidOperationException("Connection string 'SchoolDataContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
