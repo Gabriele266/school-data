@@ -51,9 +51,9 @@ namespace SchoolData.Models
             Student[] mock =
             {
                 new Student(nome: "Giovanni", cognome: "Secondo", assenze: 20, classe: "5A", specializzazione: "Informatica", average: null),
-                new Student(nome: "Gabriele", cognome: "Terzo", assenze: 5, classe: "5B", specializzazione: "Meccanica"),
-                new Student(nome: "Albert", cognome: "Einstein", assenze: 0, classe: "4B", specializzazione: "Physics"),
-                new Student(nome: "John", cognome: "Lennon", assenze: 0, classe: "3B", specializzazione: "Music"),
+                new Student(nome: "Gabriele", cognome: "Terzo", assenze: 5, classe: "5B", specializzazione: "Meccanica", average: null),
+                new Student(nome: "Albert", cognome: "Einstein", assenze: 0, classe: "4B", specializzazione: "Physics", average: null),
+                new Student(nome: "John", cognome: "Lennon", assenze: 0, classe: "3B", specializzazione: "Music", average: null),
             };
 
             return mock;
