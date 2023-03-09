@@ -20,14 +20,17 @@ namespace SchoolData.Models
         public String? classe { get; set; }
         [DisplayName("Spec")]
         public String? specializzazione { get; set; }
+        [DisplayName("Media voti")]
+        public float? averageVote { get; set; }
 
-        public Student(String nome, String cognome, int assenze, String? classe, String? specializzazione) 
+        public Student(String nome, String cognome, int assenze, String? classe, String? specializzazione, int? average) 
         {
             this.nome = nome;
             this.cognome = cognome;
             this.assenze = assenze;
             this.classe = classe;
             this.specializzazione = specializzazione;
+            this.averageVote = average;
         }
 
         public override string ToString()
@@ -47,7 +50,7 @@ namespace SchoolData.Models
         {
             Student[] mock =
             {
-                new Student(nome: "Giovanni", cognome: "Secondo", assenze: 20, classe: "5A", specializzazione: "Informatica"),
+                new Student(nome: "Giovanni", cognome: "Secondo", assenze: 20, classe: "5A", specializzazione: "Informatica", average: null),
                 new Student(nome: "Gabriele", cognome: "Terzo", assenze: 5, classe: "5B", specializzazione: "Meccanica"),
                 new Student(nome: "Albert", cognome: "Einstein", assenze: 0, classe: "4B", specializzazione: "Physics"),
                 new Student(nome: "John", cognome: "Lennon", assenze: 0, classe: "3B", specializzazione: "Music"),

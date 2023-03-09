@@ -37,7 +37,6 @@ namespace SchoolData.Controllers
             }
         }
 
-        [HttpPost]
         public IActionResult Edit(int studentId)
         {
             // Load student
