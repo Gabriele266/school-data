@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gabrielecavallo/Projects/SchoolData/SchoolData/SchoolData.csproj": {}
+    "/Users/valentinameineri/school-data/SchoolData/SchoolData.csproj": {}
   },
   "projects": {
-    "/Users/gabrielecavallo/Projects/SchoolData/SchoolData/SchoolData.csproj": {
+    "/Users/valentinameineri/school-data/SchoolData/SchoolData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gabrielecavallo/Projects/SchoolData/SchoolData/SchoolData.csproj",
+        "projectUniqueName": "/Users/valentinameineri/school-data/SchoolData/SchoolData.csproj",
         "projectName": "SchoolData",
-        "projectPath": "/Users/gabrielecavallo/Projects/SchoolData/SchoolData/SchoolData.csproj",
-        "packagesPath": "/Users/gabrielecavallo/.nuget/packages/",
-        "outputPath": "/Users/gabrielecavallo/Projects/SchoolData/SchoolData/obj/",
+        "projectPath": "/Users/valentinameineri/school-data/SchoolData/SchoolData.csproj",
+        "packagesPath": "/Users/valentinameineri/.nuget/packages/",
+        "outputPath": "/Users/valentinameineri/school-data/SchoolData/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gabrielecavallo/.nuget/NuGet/NuGet.Config"
+          "/Users/valentinameineri/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -57,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
