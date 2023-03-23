@@ -1,29 +1,41 @@
 ﻿<Properties StartupConfiguration="{8E9C23E4-9C78-4400-9E8A-030760C7745D}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Class.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="Models/Class.cs" Line="12" Column="2" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="50" Column="94" />
+      <File FileName="Models/Student.cs" />
+      <File FileName="Migrations/SchoolDataContextModelSnapshot.cs" />
+      <File FileName="Migrations/20230322193853_CreateClass.cs" />
+      <File FileName="Data/SchoolDataContext.cs" />
+      <File FileName="Controllers/StudentController.cs" />
+      <File FileName="Views/Student/Edit.cshtml" />
+      <File FileName="Views/Student/Index.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SchoolData" expanded="True">
             <Node name="SchoolData" expanded="True">
-              <Node name="Controllers" expanded="True" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Views" expanded="True" />
-              <Node name="wwwroot" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+                <Node name="Student" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.SchoolData PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

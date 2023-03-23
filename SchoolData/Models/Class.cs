@@ -6,7 +6,7 @@ namespace SchoolData.Models;
 public class Class
 {
     public int Id { get; set; }
-    public string? Classe { get; set; }
-    public string? Specializzazione { get; set; }
+    public string? classe { get; set; }
+    public string? specializzazione { get; set; }
 
 }

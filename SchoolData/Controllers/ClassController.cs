@@ -22,7 +22,7 @@ namespace SchoolData.Controllers
         // GET: Class
         public async Task<IActionResult> Index()
         {
-              return _context.Class != null ? 
+            return _context.Class != null ? 
                           View(await _context.Class.ToListAsync()) :
                           Problem("Entity set 'SchoolDataContext.Class'  is null.");
         }
