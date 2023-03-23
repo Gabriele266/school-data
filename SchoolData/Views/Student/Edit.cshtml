@@ -1,0 +1,52 @@
+﻿@model SchoolData.Models.Student;
+
+<h1>Modifica studente</h1>
+<div>Inserisci le nuove informazioni dello studente</div>
+
+<table cellpadding="20">
+    <tr>
+        <td>
+            <lable for="Nome">Nome</lable>
+        </td>
+        <td>
+            <input type="text" name="Nome" value="@Model.nome" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <lable for="Cognome">Cognome</lable>
+        </td>
+        <td>
+            <input type="text" name="Cognome" value="@Model.cognome" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <lable for="DataNascita">Data di nascita</lable>
+        </td>
+        <td>
+            <input type="text" name="DataNascita" value="" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <lable for="Classe">Classe di appartenenza</lable>
+        </td>
+        <td>
+            <input type="text" name="Classe" value="@Model.classe" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <lable for="MediaVoti" class=""> Media dei voti</lable>
+        </td>
+        <td>
+            <input type="text" name="MediaVoti" value="@Model.averageVote" />
+        </td>
+    </tr>
+</table>
+
+<button type="submit">Salva modifiche</button>

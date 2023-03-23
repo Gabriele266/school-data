@@ -22,4 +22,10 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Student\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Student\" />
+  </ItemGroup>
 </Project>
