@@ -41,13 +41,13 @@ namespace SchoolData.Controllers
             {
                 return NotFound();
             }
-            //
+            /*
             var mediaVoti = await _context.Voti // manca da aggiungere il database fatto bene
             .Where(v => v.idStudente == id) // credo fa la media
             .AverageAsync(v => v.voto);
 
              ViewBag.MediaVoti = mediaVoti; // borsello dove le cose che metti le puoi riprendere dalla view
-            //
+            */
 
             return View(@class);
         }
