@@ -11,7 +11,14 @@ La struttura dei dati è la seguente:
 
 Studente (Id [PK], Nome, Cognome, Assenze, Classe [FK], VotoMedio)
 
+NOTA: Assenze rappresenta il numero di assenze
+
 L'entità studente rappresenta uno studente della scuola, che fa parte di una classe, rappresentata da un'altra entità in relazione one-to-many:
-Classe
+Classe (Codice [PK], Specializzazione)
 
 ## Visualizzazione dei grafici
+La visualizzazione dei grafici viene gestita tramite la libreria **ChartJS** che permette di creare grafici a barre, a torta e così via. 
+Saranno basati sui dati relativi alle assenze e alla media dei voti. La libreria viene installata lato client ed è scritta in Javascript. 
+
+## Architettura e tecnologie utilizzate
+La applicazione utilizza il pattern architetturale MVC (Model View Controller) ed è realizzata in ASP.NET Core C#. Il database utilizzato è SQL Server. 
