@@ -1,4 +1,4 @@
-﻿@model SchoolData.Models.Student[]
+@model SchoolData.Models.Student[]
 
 @{
     ViewData["Title"] = "Studenti";
@@ -22,12 +22,15 @@
             <th>
                 Classe
             </th>
+            <th>
+                Specializzazione
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
-            {
+        {
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.nome)
@@ -42,11 +45,14 @@
                     @Html.DisplayFor(modelItem => item.classe)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.specializzazione)
+                </td>
+                <td>
                     <a style="margin-right: 20px;" asp-controller="Student" asp-action="Edit" asp-route-id="23"><i class="fa-regular fa-pen-to-square"></i> Modifica</a>
                     <a style="margin-right: 20px;" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i> Dettaglio</a>
                     <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
-            }
+        }
     </tbody>
 </table>

@@ -1,0 +1,40 @@
+@model IEnumerable<SchoolData.Models.Class>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Classi e specializzazioni</h2>
+<div style="margin-bottom: 20px;">Queste sono tutte le classi e le specializzazioni presenti </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Classe
+            </th>
+            <th>
+                Specializzazione
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.classe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.specializzazione)
+                </td>
+                <td>
+                    <a style="margin-right: 20px;" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
+                    <a style="margin-right: 20px;" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i>Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

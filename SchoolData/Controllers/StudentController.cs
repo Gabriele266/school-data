@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,10 +10,10 @@ namespace SchoolData.Controllers
 {
     public class StudentController : Controller
     {
-            //private readonly MvcStudentContext _context;
+        //private readonly MvcStudentContext _context;
         private readonly ILogger<StudentController> _logger;
 
-            public StudentController(ILogger<StudentController> logger)
+        public StudentController(ILogger<StudentController> logger)
         {
             // _context = context;
             _logger = logger;
@@ -46,4 +46,3 @@ namespace SchoolData.Controllers
         }
     }
 }
-

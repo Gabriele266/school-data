@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
@@ -7,8 +7,8 @@ namespace SchoolData.Models
     /**
      * Rappresenta uno studente
      * */
-	public class Student
-	{
+    public class Student
+    {
         public int Id { get; set; }
         [DisplayName("Nome")]
         public String? nome { get; set; }
@@ -23,7 +23,7 @@ namespace SchoolData.Models
         [DisplayName("Media voti")]
         public float? averageVote { get; set; }
 
-        public Student(String nome, String cognome, int assenze, String? classe, String? specializzazione, int? average) 
+        public Student(String nome, String cognome, int assenze, String? classe, String? specializzazione, int? average)
         {
             this.nome = nome;
             this.cognome = cognome;
