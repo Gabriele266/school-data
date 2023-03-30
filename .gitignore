@@ -9,7 +9,9 @@
 *.user
 *.userosscache
 *.sln.docstates
+# Project executables
 SchoolData/obj
+SchoolData/bin
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
