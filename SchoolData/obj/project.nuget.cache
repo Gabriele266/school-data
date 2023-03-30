@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "yN6XJQaYCqODB/6LB5EuJ9y/Gs9jOdZZmkf8l0F3cte3K1J3ZRU1rveMWHmHu7l/QlECGAdWJBpTOV8u20Qhnw==",
+  "dgSpecHash": "NGebj55dRhDqMiejMXHqXJvWV6ZvVfTamsN8TgR+yQD+pj2CzcB4ngDZDqB8NtC6QJrlmC9VaWPO9IX2aeGeWA==",
   "success": true,
   "projectFilePath": "/Users/valentinameineri/school-data/SchoolData/SchoolData.csproj",
   "expectedPackageFiles": [
     "/Users/valentinameineri/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/valentinameineri/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
+    "/Users/valentinameineri/.nuget/packages/chartjs/22.2.4/chartjs.22.2.4.nupkg.sha512",
+    "/Users/valentinameineri/.nuget/packages/cldrjs/0.4.4/cldrjs.0.4.4.nupkg.sha512",
     "/Users/valentinameineri/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/valentinameineri/.nuget/packages/jquery/3.5.1/jquery.3.5.1.nupkg.sha512",
+    "/Users/valentinameineri/.nuget/packages/jquery-globalize/1.1.1/jquery-globalize.1.1.1.nupkg.sha512",
     "/Users/valentinameineri/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.11/microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "/Users/valentinameineri/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/valentinameineri/.nuget/packages/microsoft.build/17.3.2/microsoft.build.17.3.2.nupkg.sha512",
