@@ -8,6 +8,8 @@ Configurazione del progetto per avviare lo sviluppo.
 * Configurazione dati mock (2 pom)
 * Configurazione DB (2 pom)
 * Configurazione progetto .NET CORE (1/2 pom)
+* Configurazione repo (1/2 pom)
+* Configurazione libreria per i grafici (1/2 pom)
 
 ## Visualizzazione dati
 Visualizzazione dell'elenco degli studenti e delle classi
