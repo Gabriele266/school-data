@@ -1,8 +1,5 @@
 ﻿<Properties StartupConfiguration="{8E9C23E4-9C78-4400-9E8A-030760C7745D}|https">
-  <MonoDevelop.Ide.ItemProperties.SchoolData PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Views/Student/Details.cshtml">
     <Files>
       <File FileName="Controllers/StudentController.cs" />
@@ -21,7 +18,8 @@
       <File FileName="Views/Class/Delete.cshtml" />
       <File FileName="Views/Student/Delete.cshtml" />
       <File FileName="Views/Class/Details.cshtml" />
-      <File FileName="Views/Student/Details.cshtml" Line="17" Column="30" />
+      <File FileName="appsettings.json" />
+      <File FileName="Views/Student/Details.cshtml" Line="60" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -49,5 +47,8 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.SchoolData PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
