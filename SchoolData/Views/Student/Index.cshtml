@@ -5,6 +5,9 @@
 }
 
 <h2>Studenti della scuola</h2>
+<a asp-action="Create" asp-controller="Student" class="btn btn-primary">
+    Aggiungi
+</a>
 <div style="margin-bottom: 20px;">Questi sono tutti gli studenti che fanno parte della scuola. </div>
 
 <table class="table">
@@ -24,6 +27,9 @@
             </th>
             <th>
                 Specializzazione
+            </th>
+            <th>
+                Media voti
             </th>
             <th></th>
         </tr>
@@ -48,9 +54,12 @@
                     @Html.DisplayFor(modelItem => item.specializzazione)
                 </td>
                 <td>
-                    <a style="margin-right: 20px;" asp-controller="Student" asp-action="Edit" asp-route-id="23"><i class="fa-regular fa-pen-to-square"></i> Modifica</a>
-                    <a style="margin-right: 20px;" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i> Dettaglio</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
+                    @Html.DisplayFor(modelItem => item.averageVote)
+                </td>
+                <td>
+                    <a class="btn btn-primary" style="margin-right: 20px;" asp-controller="Student" asp-action="Edit" asp-route-id="23"><i class="fa-regular fa-pen-to-square"></i> Modifica</a>
+                    <a class="btn btn-primary" style="margin-right: 20px;" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i> Dettaglio</a>
+                    <a class="btn btn-primary" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
         }

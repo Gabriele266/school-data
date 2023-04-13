@@ -33,6 +33,11 @@ namespace SchoolData.Models
             this.averageVote = averageVote;
         }
 
+        public Student()
+        {
+
+        }
+
         public override string ToString()
         {
             return "Studente " + Id;
