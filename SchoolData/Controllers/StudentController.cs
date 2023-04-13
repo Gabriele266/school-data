@@ -5,30 +5,28 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SchoolData.Models;
 using SchoolData.Data;
+using SchoolData.Mock;
 
 namespace SchoolData.Controllers
 {
     public class StudentController : Controller
     {
-        //private readonly MvcStudentContext _context;
         private readonly ILogger<StudentController> _logger;
+        private readonly SchoolDataContext _context;
 
-        public StudentController(ILogger<StudentController> logger)
+        public StudentController(ILogger<StudentController> logger, SchoolDataContext context)
         {
-            // _context = context;
             _logger = logger;
+            this._context = context;
         }
 
         // GET: /<controller>/
         [HttpGet]
         public IActionResult Index()
         {
-            // TODO: Sostituire con valori effettivi
-            //Student[] students = _context.Student.ToList().ToArray();
-
             try
             {
-                Student[] students = Student.GetMockValues();
+                Student[] students = _context.Student.ToList().ToArray();
                 return View(students);
             }
             catch (Exception)
@@ -40,7 +38,7 @@ namespace SchoolData.Controllers
         public IActionResult Edit(int studentId)
         {
             // Load student
-            Student s = Student.GetMockValues()[0];
+            Student s = StudentMock.GetMockValues()[0];
 
             return View(s);
         }

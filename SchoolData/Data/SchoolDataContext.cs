@@ -14,7 +14,7 @@ namespace SchoolData.Data
         {
         }
 
-        public DbSet<SchoolData.Models.Class> Class { get; set; } 
-
+        public DbSet<SchoolData.Models.Class> Class { get; set; }
+        public DbSet<SchoolData.Models.Student> Student { get; set; }
     }
 }
