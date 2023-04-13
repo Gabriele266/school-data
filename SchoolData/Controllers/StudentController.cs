@@ -20,7 +20,6 @@ namespace SchoolData.Controllers
             this._context = context;
         }
 
-        // GET: /<controller>/
         [HttpGet]
         public IActionResult Index()
         {
@@ -41,6 +40,26 @@ namespace SchoolData.Controllers
             Student s = StudentMock.GetMockValues()[0];
 
             return View(s);
+        }
+
+        // GET: Prenotazione/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,nome,cognome,assenze,classe,specializzazione,averageVote")] Student student)
+        {
+            _logger.LogInformation(student.Id.ToString());
+            _logger.LogInformation(student.nome);
+            if (ModelState.IsValid)
+            {
+                _context.Add(student);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction("Index");
         }
     }
 }
