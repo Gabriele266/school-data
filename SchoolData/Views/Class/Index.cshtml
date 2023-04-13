@@ -6,7 +6,9 @@
 
 <h2>Classi e specializzazioni</h2>
 <div style="margin-bottom: 20px;">Queste sono tutte le classi e le specializzazioni presenti </div>
-
+<a asp-action="Create" asp-controller="Class">
+    Aggiungi una nuova classe
+</a>
 <table class="table">
     <thead>
         <tr>
@@ -16,6 +18,7 @@
             <th>
                 Specializzazione
             </th>
+           
             <th></th>
         </tr>
     </thead>
@@ -29,9 +32,10 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.specializzazione)
                 </td>
+                
                 <td>
-                    <a style="margin-right: 20px;" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-regular fa-pen-to-square"></i>Edit</a>
-                    <a style="margin-right: 20px;" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i>Details</a>
+                    <a style="margin-right: 10px;" asp-controller="Class" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-regular fa-pen-to-square"></i> Modifica</a>
+                    <a style="margin-right: 10px;" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i> Dettaglio</a>
                     <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>

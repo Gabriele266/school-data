@@ -10,7 +10,7 @@
                 <lable for="Nome" class="control-label">Nome</lable>
             </td>
             <td>
-                <input type="text" name="Nome" value="@Model.nome" />
+                <input type="text" name="Nome" value="@Model.nome" class="form-control"/>
             </td>
         </tr>
 
@@ -19,15 +19,15 @@
                 <lable for="Cognome" class="control-label">Cognome</lable>
             </td>
             <td>
-                <input type="text" name="Cognome" value="@Model.cognome" />
+                <input type="text" name="Cognome" value="@Model.cognome" class="form-control"/>
             </td>
         </tr>
         <tr>
             <td>
-                <lable for="DataNascita" class="control-label">Data di nascita</lable>
+                <lable for="Assenze" class="control-label">Assenze</lable>
             </td>
             <td>
-                <input type="text" name="DataNascita" value="" />
+                <input type="number" name="Assenze" value="@Model.assenze" class="form-control"/>
             </td>
         </tr>
 
@@ -36,7 +36,7 @@
                 <lable for="Classe" class="control-label">Classe</lable>
             </td>
             <td>
-                <input type="text" name="Classe" value="@Model.classe" />
+                <input type="text" name="Classe" value="@Model.classe" class="form-control"/>
             </td>
         </tr>
         <tr>
@@ -44,7 +44,7 @@
                 <lable for="Specializzazione" class="control-label">Specializzazione</lable>
             </td>
             <td>
-                <input type="text" name="Specializzazione" value="@Model.specializzazione" />
+                <input type="text" name="Specializzazione" value="@Model.specializzazione" class="form-control"/>
             </td>
         </tr>
         <tr>
@@ -52,10 +52,12 @@
                 <lable for="MediaVoti" class="control-label">Media dei voti</lable>
             </td>
             <td>
-                <input type="text" name="MediaVoti" value="@Model.averageVote" />
+                <input type="number" name="MediaVoti" min="0" max="10" value="@Model.averageVote" class="form-control"/>
             </td>
         </tr>
     </table>
+    <div class="form-group">
+        <input type="submit" value="Salva modifiche" class="btn btn-primary" />
+    </div>
 </form>
 <br>
-<button type="submit" class="btn btn-primary" >Salva modifiche</button>

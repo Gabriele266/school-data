@@ -1,4 +1,4 @@
-@model SchoolData.Models.Class
+@model SchoolData.Models.Student
 
 @{
     ViewData["Title"] = "Delete";
@@ -6,18 +6,48 @@
 
 <h1>Delete</h1>
 
-<h3>Conferma di voler eliminare la classe</h3>
+<h3>Conferma di voler eliminare questo studente</h3>
 <div>
-    <h4>Class</h4>
+    <h4>Studente</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.cognome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.cognome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.assenze)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.assenze)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.classe)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.classe)
         </dd>
-        
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.specializzazione)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.specializzazione)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.averageVote)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.averageVote)
+        </dd>
+
     </dl>
     
     <form asp-action="Delete">

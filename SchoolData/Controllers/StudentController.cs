@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using SchoolData.Models;
 using SchoolData.Data;
 using SchoolData.Mock;
+using Microsoft.EntityFrameworkCore;
 
 namespace SchoolData.Controllers
 {
@@ -34,12 +35,58 @@ namespace SchoolData.Controllers
             }
         }
 
-        public IActionResult Edit(int studentId)
+        /*public IActionResult Edit(int studentId)
         {
             // Load student
             Student s = StudentMock.GetMockValues()[0];
 
             return View(s);
+        }*/
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,nome,cognome,assenze,classe,specializzazione,averageVote")] Student @student)
+        {
+            if (id != @student.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(@student);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!StudentExist(@student.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(@student);
+        }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.Student == null)
+            {
+                return NotFound();
+            }
+
+            var @student = await _context.Student.FindAsync(id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+            return View(student);
         }
 
         // GET: Prenotazione/Create
@@ -60,6 +107,48 @@ namespace SchoolData.Controllers
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null || _context.Student == null)
+            {
+                return NotFound();
+            }
+
+            var @student = await _context.Student
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (@student == null)
+            {
+                return NotFound();
+            }
+
+            return View(@student);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (_context.Student == null)
+            {
+                return Problem("Entity set 'SchoolDataContext.Student'  is null.");
+            }
+            var @student = await _context.Student.FindAsync(id);
+            if (@student != null)
+            {
+                _context.Student.Remove(@student);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool StudentExist(int id)
+        {
+           
+            return (_context.Student?.Any(e => e.Id == id)).GetValueOrDefault();
+            
         }
     }
 }
