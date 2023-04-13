@@ -35,6 +35,23 @@ namespace SchoolData.Controllers
             }
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null || _context.Student == null)
+            {
+                return NotFound();
+            }
+
+            var @student = await _context.Student
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (@student == null)
+            {
+                return NotFound();
+            }
+
+            return View(@student);
+        }
+
         /*public IActionResult Edit(int studentId)
         {
             // Load student
