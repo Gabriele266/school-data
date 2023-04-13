@@ -3,12 +3,14 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Views/Student/Details.cshtml">
     <Files>
-      <File FileName="Controllers/StudentController.cs" />
+      <File FileName="Controllers/StudentController.cs" Line="1" Column="1" />
       <File FileName="Controllers/ClassController.cs" />
       <File FileName="Data/SchoolDataContext.cs" />
-      <File FileName="Models/Student.cs" />
+      <File FileName="Models/Student.cs" Line="1" Column="1" />
       <File FileName="Views/Student/Index.cshtml" />
       <File FileName="Views/Class/Create.cshtml" />
       <File FileName="Views/Student/Create.cshtml" />
@@ -21,7 +23,7 @@
       <File FileName="Views/Class/Delete.cshtml" />
       <File FileName="Views/Student/Delete.cshtml" />
       <File FileName="Views/Class/Details.cshtml" />
-      <File FileName="Views/Student/Details.cshtml" Line="17" Column="30" />
+      <File FileName="Views/Student/Details.cshtml" Line="15" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -48,6 +50,4 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
