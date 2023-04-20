@@ -1,0 +1,44 @@
+public class Studente
+{
+    public int IdStudente { get; set; }
+    public string Nome { get; set; }
+    public string Cognome { get; set; }
+    public int Assenze { get; set; }
+    public double MediaVoti { get; set; }
+
+    // Chiave esterna
+    public int IdClasse { get; set; }
+    public Classe Classe { get; set; }
+}
+
+
+public class Classe
+{
+    public int IdClasse { get; set; }
+    public string NomeClasse { get; set; }
+    public string Specializzazione { get; set; }
+
+    // Proprietà di navigazione
+    public List<Studente> Studenti { get; set; }
+}
+
+
+
+public class TuoDbContext : DbContext
+{
+    public DbSet<Studente> Studenti { get; set; }
+    public DbSet<Classe> Classi { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Studente>()
+            .HasOne(s => s.Classe)
+            .WithMany(c => c.Studenti)
+            .HasForeignKey(s => s.IdClasse)
+            .OnDelete(DeleteBehavior.Cascade); // Specifica il comportamento di eliminazione
+
+        base.OnModelCreating(modelBuilder);
+    }
+}
+
+

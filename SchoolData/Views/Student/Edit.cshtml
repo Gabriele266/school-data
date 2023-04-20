@@ -1,0 +1,63 @@
+﻿@model SchoolData.Models.Student;
+
+<h1>Modifica studente</h1>
+<div>Inserisci le nuove informazioni dello studente</div>
+
+<form asp-action="Edit">
+    <table cellpadding="10">
+        <tr>
+            <td>
+                <lable for="Nome" class="control-label">Nome</lable>
+            </td>
+            <td>
+                <input type="text" name="Nome" value="@Model.nome" class="form-control"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <lable for="Cognome" class="control-label">Cognome</lable>
+            </td>
+            <td>
+                <input type="text" name="Cognome" value="@Model.cognome" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <lable for="Assenze" class="control-label">Assenze</lable>
+            </td>
+            <td>
+                <input type="number" name="Assenze" value="@Model.assenze" class="form-control"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <lable for="Classe" class="control-label">Classe</lable>
+            </td>
+            <td>
+                <input type="text" name="Classe" value="@Model.classe" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <lable for="Specializzazione" class="control-label">Specializzazione</lable>
+            </td>
+            <td>
+                <input type="text" name="Specializzazione" value="@Model.specializzazione" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <lable for="averageVote" class="control-label">Media dei voti</lable>
+            </td>
+            <td>
+                <input type="number" name="averageVote" min="0" max="10" value="@Model.averageVote" class="form-control"/>
+            </td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <input type="submit" value="Salva modifiche" class="btn btn-primary" />
+    </div>
+</form>
+<br>

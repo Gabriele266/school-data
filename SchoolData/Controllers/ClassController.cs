@@ -13,6 +13,7 @@ namespace SchoolData.Controllers
     public class ClassController : Controller
     {
         private readonly SchoolDataContext _context;
+   
 
         public ClassController(SchoolDataContext context)
         {
@@ -22,7 +23,7 @@ namespace SchoolData.Controllers
         // GET: Class
         public async Task<IActionResult> Index()
         {
-              return _context.Class != null ? 
+            return _context.Class != null ? 
                           View(await _context.Class.ToListAsync()) :
                           Problem("Entity set 'SchoolDataContext.Class'  is null.");
         }
@@ -41,13 +42,6 @@ namespace SchoolData.Controllers
             {
                 return NotFound();
             }
-            /*
-            var mediaVoti = await _context.Voti // manca da aggiungere il database fatto bene
-            .Where(v => v.idStudente == id) // credo fa la media
-            .AverageAsync(v => v.voto);
-
-             ViewBag.MediaVoti = mediaVoti; // borsello dove le cose che metti le puoi riprendere dalla view
-            */
 
             return View(@class);
         }
@@ -63,15 +57,16 @@ namespace SchoolData.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Classe,Specializzazione")] Class @class)
+        public async Task<IActionResult> Create([Bind("Id,classe,specializzazione")] Class c)
         {
+   
+
             if (ModelState.IsValid)
             {
-                _context.Add(@class);
+                _context.Add(c);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
             }
-            return View(@class);
+            return RedirectToAction("Index");
         }
 
         // GET: Class/Edit/5
@@ -95,7 +90,7 @@ namespace SchoolData.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Classe,Specializzazione")] Class @class)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,classe,specializzazione")] Class @class)
         {
             if (id != @class.Id)
             {

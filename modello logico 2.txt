@@ -1,0 +1,2 @@
+classe(id_classe(PK), nome_classe, specializzazione)
+studente(id_studente(PK), nome, cognome, assenze, averageVote, id_classe(FK))
