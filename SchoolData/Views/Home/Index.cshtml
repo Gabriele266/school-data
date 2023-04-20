@@ -1,9 +1,50 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<htlml>
+    <head class="text-center">
+        <title>class="display-4">School-Data</title>
+    </head>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <h3>Funzionalità principali:</h3><br />
+                        <ul>
+                            <li>Visualizzazione delle classi</li>
+                            <li>Visualizzazione degli alunni</li>
+                            <li>Visualizzazione della media degli alunni</li>
+                            <li>Visualizzazione di grafici</li>
+                        </ul>
+                    </td>
+                    <td><img class="preview" src="@Url.Content("/Images/Imm1.png")" /></td>
+                </tr>
+            </table>
+            <a href="#inizio"><button class="button">Inizia da qui --></button></a>
+        </div>
+        <div>
+            <div class="emptyDiv"></div>
+            <div class="emptyDiv"></div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+            <h4>Login:</h4>
+            <a name="inizio"></a>
+            <form>
+                <label>E-mail:</label>
+                <input type="text" />
 
+                <label>Password:</label>
+                <input type="password" />
+
+                <label>Ruolo:</label>
+                <select>
+                    <option value="0">seleziona ruolo</option>
+                    <option value="1">Docente</option>
+                    <option value="2">Amministratore</option>
+                </select>
+                <br></br>
+                <button class="button" type="submit">Invia</button>
+            </form>
+        </div>
+    </body>
+</htlml> 

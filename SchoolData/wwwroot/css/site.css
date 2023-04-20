@@ -18,5 +18,34 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #d5e3e3; /*1°: #edf4fd*/
+}
+
+.button {
+    position: center;
+    text-align: center;
+    background-color: #ffb201;
+    color: #ffff;
+    border: none;
+    border-radius: 40px;
+    height: 40px;
+    width: 50%;
+    font-size: 20px;
+}
+    .button:hover {
+        background-color: #ffb201; /*cambiare colore*/
+        color: white;
+    }
+
+.emptyDiv {
+    width: 400px;
+    height: 200px;
+}
+
+.divCol {
+    position: absolute;
+    background: #e3d4ac;
+    width: 100px;
+    height: 100px;
 }
