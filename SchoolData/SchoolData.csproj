@@ -28,10 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Student\" />
-<<<<<<< HEAD
     <Folder Include="Mock\" />
-=======
     <Folder Include="wwwroot\Images\" />
->>>>>>> Marta
   </ItemGroup>
 </Project>
