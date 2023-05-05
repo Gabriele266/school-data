@@ -30,7 +30,7 @@ body {
     border: none;
     border-radius: 40px;
     height: 40px;
-    width: 50%;
+    width: 100%;
     font-size: 20px;
 }
     .button:hover {
@@ -48,4 +48,12 @@ body {
     background: #e3d4ac;
     width: 100px;
     height: 100px;
+}
+
+.divCol2 {
+    background: #b8cbcc;
+    margin: 50px;
+    border: 50px;
+    padding: 50px;
+    border-radius: 10px 10px 10px 10px;
 }
