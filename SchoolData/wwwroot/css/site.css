@@ -49,5 +49,11 @@ body {
     width: 100px;
     height: 100px;
 }
-.table{
-nav {
+
+.divCol2 {
+    background: #b8cbcc;
+    margin: 50px;
+    border: 50px;
+    padding: 50px;
+    border-radius: 10px 10px 10px 10px;
+}
