@@ -1,47 +1,52 @@
 ﻿<Properties StartupConfiguration="{8E9C23E4-9C78-4400-9E8A-030760C7745D}|https">
-  <MonoDevelop.Ide.ItemProperties.SchoolData PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Student/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Index.cshtml">
     <Files>
-      <File FileName="Controllers/StudentController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/ClassController.cs" />
+      <File FileName="Controllers/StudentController.cs" />
+      <File FileName="Controllers/ClassController.cs" Line="1" Column="1" />
       <File FileName="Data/SchoolDataContext.cs" />
       <File FileName="Models/Student.cs" Line="1" Column="1" />
-      <File FileName="Views/Student/Index.cshtml" />
-      <File FileName="Views/Class/Create.cshtml" />
+      <File FileName="Views/Student/Index.cshtml" Line="66" Column="1" />
+      <File FileName="Views/Class/Create.cshtml" Line="9" Column="1" />
       <File FileName="Views/Student/Create.cshtml" />
-      <File FileName="Views/Class/Index.cshtml" />
-      <File FileName="Views/Class/Edit.cshtml" />
-      <File FileName="Views/Student/Edit.cshtml" />
+      <File FileName="Views/Class/Index.cshtml" Line="43" Column="1" />
+      <File FileName="Views/Class/Edit.cshtml" Line="27" Column="113" />
+      <File FileName="Views/Student/Edit.cshtml" Line="55" Column="45" />
       <File FileName="Models/ErrorViewModel.cs" />
       <File FileName="Models/Class.cs" />
       <File FileName="Controllers/HomeController.cs" />
-      <File FileName="Views/Class/Delete.cshtml" />
+      <File FileName="Views/Class/Delete.cshtml" Line="1" Column="1" />
       <File FileName="Views/Student/Delete.cshtml" />
-      <File FileName="Views/Class/Details.cshtml" />
-      <File FileName="Views/Student/Details.cshtml" Line="15" Column="11" />
+      <File FileName="Views/Class/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Student/Details.cshtml" Line="10" Column="9" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="27" Column="21" />
+      <File FileName="wwwroot/css/site.css" Line="62" Column="2" />
+      <File FileName="Views/Shared/_Layout.cshtml.css" Line="25" Column="1" />
+      <File FileName="Views/Home/Index.cshtml" Line="34" Column="36" />
+      <File FileName="wwwroot/js/site.js" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SchoolData" expanded="True">
             <Node name="SchoolData" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-              </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Class" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="Student" expanded="True">
-                  <Node name="Details.cshtml" selected="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
                 </Node>
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" expanded="True" />
+                </Node>
+                <Node name="Student" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="Images" expanded="True" />
+                <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -49,5 +54,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SchoolData PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
