@@ -24,9 +24,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Student\" />
+    <None Remove="Mock\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Student\" />
+    <Folder Include="Mock\" />
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 </Project>

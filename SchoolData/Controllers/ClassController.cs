@@ -13,6 +13,7 @@ namespace SchoolData.Controllers
     public class ClassController : Controller
     {
         private readonly SchoolDataContext _context;
+   
 
         public ClassController(SchoolDataContext context)
         {
@@ -56,15 +57,16 @@ namespace SchoolData.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Classe,Specializzazione")] Class @class)
+        public async Task<IActionResult> Create([Bind("Id,classe,specializzazione")] Class c)
         {
+   
+
             if (ModelState.IsValid)
             {
-                _context.Add(@class);
+                _context.Add(c);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
             }
-            return View(@class);
+            return RedirectToAction("Index");
         }
 
         // GET: Class/Edit/5
@@ -88,7 +90,7 @@ namespace SchoolData.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Classe,Specializzazione")] Class @class)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,classe,specializzazione")] Class @class)
         {
             if (id != @class.Id)
             {

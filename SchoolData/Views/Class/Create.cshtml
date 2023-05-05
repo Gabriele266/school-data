@@ -4,34 +4,33 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Aggiungi una nuova classe</h1>
 
-<h4>Class</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="classe" class="control-label"></label>
-                <input asp-for="classe" class="form-control" />
-                <span asp-validation-for="classe" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="specializzazione" class="control-label"></label>
-                <input asp-for="specializzazione" class="form-control" />
-                <span asp-validation-for="specializzazione" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+<form asp-action="Create">
+    <table cellpadding="10">
+        <tr>
+            <td>
+                <label asp-for="classe" class="control-label">Classe </label>
+                
+            </td>
+            <td>
+                <input asp-for="classe" type="text" name="classe" class="form-control" required />
+            </td>
+        </tr>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+        <tr>
+            <td>
+                <label asp-for="specializzazione" class="control-label"> Specializzazione </label>
+            </td>
+            <td>
+                <input asp-for="specializzazione" type="text" name="specializzazione" class="form-control" required />
+            </td>
+        </tr>
+        
+    </table>
+
+    <input type="submit" class="btn btn-primary" value="Aggiungi Classe" />
+</form>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
