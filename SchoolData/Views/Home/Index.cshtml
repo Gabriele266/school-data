@@ -1,42 +1,59 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<htlml>
-    <head class="text-center">
-        <title>class="display-4">School-Data</title>
-    </head>
-    <body>
-        <table>
-            <tr>
-                <td>
-                    <h1>School-Data</h1>
-                    <p>La nostra applicazione semplice e funzionale per docenti <br />che permette di visualizzare grafici <br />riferiti all'andamento della classe e dei singoli studenti</p>
-                    <h3>Funzionalità principali:</h3>
-                    <ul>
-                        <li>Visualizzazione delle classi</li>
-                        <li>Visualizzazione degli alunni</li>
-                        <li>Visualizzazione della media degli alunni</li>
-                        <li>Visualizzazione di grafici</li>
-                    </ul>
-                </td>
-                <td><img class="preview" src="@Url.Content("/Images/Imm1.png")" /></td>
-                <td></td>
-                <td>
-                    <div class="divCol2">
-                        <form>
-                            <h3>Hello there!</h3>
-                            Email: <input type="text" class="form-control" id="email" /><br />
-                            Passward: <input type="passward" class="form-control" id="paw" /><br />
-                            Ruolo: <select class="form-control" id="ruolo">
-                                        <option value="0">--Seleziona--</option>
-                                        <option value="1">Docente</option>
-                                        <option value="2">Amministratore</option>
-                                   </select><br />
-                            <input type="button" id="btn" class="button" value="Login" />
-                        </form>
-                    </div>
-                </td>
-            </tr>
-        </table>
+<html>
+<head class="text-center">
+    <title>School-Data</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <h1>School-Data</h1>
+                <p>La nostra applicazione semplice e funzionale per docenti <br />che permette di visualizzare grafici <br />riferiti all'andamento della classe e dei singoli studenti</p>
+                <h3>Funzionalità principali:</h3>
+                <ul>
+                    <li>Visualizzazione delle classi</li>
+                    <li>Visualizzazione degli alunni</li>
+                    <li>Visualizzazione della media degli alunni</li>
+                    <li>Visualizzazione di grafici</li>
+                </ul>
+            </td>
+            <td><img class="preview" src="@Url.Content("/Images/Imm1.png")" /></td>
+            <td></td>
+            <td>
+                <div class="divCol2">
+                    <form>
+                        <h3>Hello there!</h3>
+                        Email: <input type="text" class="form-control" id="email" /><br />
+                        Password: <input type="password" class="form-control" id="psw" /><br />
+                        Ruolo: <select class="form-control" id="ruolo">
+                            <option value="0">--Seleziona--</option>
+                            <option value="1">Docente</option>
+                            <option value="2">Amministratore</option>
+                        </select><br />
+                        <input type="submit" id="btn" onclick="controlloAccesso()" class="button" value="Login" />
+                    </form>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function controlloAccesso() {
+            
+            var email = document.getElementById("email").value;
+            var psw = document.getElementById("psw").value;
+            var ruolo = document.getElementById("ruolo").value;
+
+            console.log(email, psw, ruolo);
+
+            if (email == "docente@gmail.com" && psw == "d123" && ruolo == "1") {
+                console.log("sono qui");
+                window.location.href = "Home/Docente";
+            } else {
+                alert("Controllare di aver inserito correttamente le credenziali");
+            }
+        }
+     </script>
     </body>
-</htlml> 
+</html>

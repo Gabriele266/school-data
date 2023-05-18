@@ -41,11 +41,19 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - SchoolData - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer class="footer">
+            <table class="tableFoot">
+                <tr>
+                    <td class="tdFoot"><h4>Contattaci</h4></td>
+                    <td class="tdFoot"><h4>Pagine</h4></td>
+                </tr>
+                <tr>
+                    <td class="tdFoot"><b>E-mail: </b><a href="mailto:schooldata@gmail.com" style="color: black;">schooldata@gmail.com</a><br><b>Telefono: </b> 0171 961501</td>
+                    <td class="tdFoot"><a href="Home/Index">Home</a><br><a href="/Home/Privacy">Privacy</a><br><a href="/Student/Index">Studenti</a><br><a href="/Class/Index">Classi</a></td>
+                </tr>
+            </table>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
