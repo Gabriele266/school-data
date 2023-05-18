@@ -67,27 +67,38 @@
 </table>
 
 <div>
-    <canvas id="myChart"></canvas>
+    <canvas id="graficoVotiStudenti"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    const ctx = document.getElementById('myChart');
+    const ctx = document.getElementById('graficoVotiStudenti');
 
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'Medie Studenti',
+                data: [@ViewBag.ListaVoti[0], 
+                @ViewBag.ListaVoti[1], 
+                @ViewBag.ListaVoti[2], 
+                @ViewBag.ListaVoti[3], 
+                @ViewBag.ListaVoti[4], 
+                @ViewBag.ListaVoti[5], 
+                @ViewBag.ListaVoti[6], 
+                @ViewBag.ListaVoti[7], 
+                @ViewBag.ListaVoti[8], 
+                @ViewBag.ListaVoti[9], 
+                @ViewBag.ListaVoti[10]],
                 borderWidth: 1
             }]
         },
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    max: 10
                 }
             }
         }

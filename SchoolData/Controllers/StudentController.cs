@@ -7,6 +7,7 @@ using SchoolData.Models;
 using SchoolData.Data;
 using SchoolData.Mock;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace SchoolData.Controllers
 {
@@ -27,6 +28,16 @@ namespace SchoolData.Controllers
             try
             {
                 Student[] students = _context.Student.ToList().ToArray();
+
+                ViewBag.ListaVoti = new int[11];
+
+                for (int i = 0; i < 11; i++)
+                {
+                    ViewBag.ListaVoti[i] = _context.Student
+                    .Where(o => o.averageVote == i)
+                    .Count();
+                }
+
                 return View(students);
             }
             catch (Exception)
