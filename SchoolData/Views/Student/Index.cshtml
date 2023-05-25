@@ -4,62 +4,63 @@
     ViewData["Title"] = "Studenti";
 }
 
-    <h2>Studenti della scuola</h2>
-    <div style="margin-bottom: 20px;">Questi sono tutti gli studenti che fanno parte della scuola. </div>
-    <br>
+<h2>Studenti della scuola</h2>
+<div>Questi sono tutti gli studenti che fanno parte della scuola. </div>
+<br>
+<a style="margin: 5px;" class="btn btn-primary" asp-action="Create" asp-controller="Student">Nuovo</a>
 
-    <table class="table">
-        <thead>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Cognome
+            </th>
+            <th>
+                Assenze
+            </th>
+            <th>
+                Classe
+            </th>
+            <th>
+                Specializzazione
+            </th>
+            <th>
+                Media voti
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
             <tr>
-                <th>
-                    Nome
-                </th>
-                <th>
-                    Cognome
-                </th>
-                <th>
-                    Assenze
-                </th>
-                <th>
-                    Classe
-                </th>
-                <th>
-                    Specializzazione
-                </th>
-                <th>
-                    Media voti
-                </th>
-                <th></th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cognome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.assenze)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.classe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.specializzazione)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.averageVote)
+                </td>
+                <td>
+                    <a style="margin-right: 10px;" asp-controller="Student" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-regular fa-pen-to-square"></i> Modifica</a>
+                    <a style="margin-right: 10px;" asp-controller="Student" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i> Dettaglio</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.cognome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.assenze)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.classe)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.specializzazione)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.averageVote)
-                    </td>
-                    <td>
-                        <a style="margin-right: 10px;" asp-controller="Student" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-regular fa-pen-to-square"></i> Modifica</a>
-                        <a style="margin-right: 10px;" asp-controller="Student" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i> Dettaglio</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
